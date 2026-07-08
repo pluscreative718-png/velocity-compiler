@@ -1,0 +1,1 @@
+name: Velocity Ecosystem CI\non: [push, pull_request]\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n    - uses: actions/checkout@v3\n    - name: Set up Python\n      uses: actions/setup-python@v4\n      with:\n        python-version: '3.11'\n    - name: Run Tests\n      run: python -m unittest discover -s tests\n
